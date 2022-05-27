@@ -1,0 +1,96 @@
+*{
+    margin:0;
+    padding:0;
+}
+body {
+    background-color: rgb(238, 238, 238);
+    font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+nav{
+    background-color: rgb(100, 30, 9);
+    color:white;
+    box-shadow: 0 2px 4px 0 rgba(0,0,0,.2);
+}
+.nav_div {
+    display: flex;
+}
+.items_left {
+    margin:1% 2%;
+}
+
+.items_right {
+    float: right;
+    margin-left:auto;
+    background-color: black;
+    font-weight: bold;
+    padding:1% 1%;
+    width: 20%;
+}
+
+.items_right a {
+    color:white;
+    text-decoration: none;
+    margin:2%;
+
+}
+.index_header {
+    background-color: black;
+    background-image: url("https://media.istockphoto.com/photos/spring-summer-concept-playful-happy-dog-running-in-the-grass-and-picture-id1199435587?k=20&m=1199435587&s=170667a&w=0&h=ZefGD0imdpgY4cjeRRoWPz-yiZlcE-DuJTGmKCO-pqs=");
+    background-size: cover;
+    height: 85vh;
+    text-align: right;
+    color:white;
+}
+
+#More {
+    padding:3%;
+}
+
+#More h1{
+    text-align: center;
+    font-size: 2.5rem;
+}
+.Titles {
+    padding: 14% 10%;
+}
+
+.Titles h1 {
+    font-size: 4rem;
+}
+.Titles h3 {
+    font-size: 2rem;
+}
+
+.Info_Box {
+    display:flex;
+    margin: 1% 0;
+}
+
+.Info_Box h3 {
+    font-size: 30px;
+}
+
+.Info_Box p {
+    font-size: 20px;
+}
+
+.img-column{
+    width:40%;
+}
+.img-column img {
+    min-width:15rem;
+    min-height: 11rem;
+    max-width: 15rem;
+    max-height: 11rem;
+    border-color:white;
+    border-style:solid;
+}
+
+.img-column {
+    margin:0 2%;
+}
+
+.text-column {
+    margin:0 2%;
+    text-align: justify;
+}
