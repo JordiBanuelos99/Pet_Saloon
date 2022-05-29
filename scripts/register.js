@@ -1,6 +1,6 @@
 //object literal
 let salon={
-    name:"The Fashion Pet",
+    name:"My Pet Salon",
     address: {
         street: "Palomar",
         zip: "22345",
@@ -8,7 +8,7 @@ let salon={
         number: "245-K"
     },
     hours: {
-        open: "9:00 a.m.",
+        open: "9:00 a. m.",
         close: "5:00 p. m."
     },
     phone:"555-5555",
@@ -87,7 +87,20 @@ function register(){
     console.log(newPet);
     clearForm();
 }
+function displayInfo(){
+    document.getElementById("info").innerHTML=
+    `<div class=row>
+        <p>Welcome to ${salon.name}, located at ${salon.address.street}, ${salon.address.city}, ${salon.address.zip}, ${salon.address.number}</p>
+        <div class=col>
+            <p>Daily schedule: ${salon.hours.open} - ${salon.hours.close}</p>
+        </div>
+        <div class=col>
+            <p>Contact: ${salon.phone}</p>
+        </div>
+    </div>`;
+}
 
 //console.log(salon.pets[i]); //Displays Scooby
 
 alert(`There are ${salon.pets.length} pets registered so far`);
+displayInfo();

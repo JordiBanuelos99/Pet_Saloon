@@ -94,3 +94,11 @@ nav a:hover {
 .more_sections h3 {
     text-align: center;
 }
+
+/* Main footer */
+#info{
+    text-align: center;
+    color:white;
+    font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+
+}
