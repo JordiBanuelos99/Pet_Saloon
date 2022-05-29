@@ -2,95 +2,95 @@
     margin:0;
     padding:0;
 }
-body {
-    background-color: rgb(238, 238, 238);
+body.register{
+    background-image: url("img/Wallpaper_2.jpg");
+    background-size: cover;
     font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    background-size: cover;
 }
 nav{
-    background-color: rgb(100, 30, 9);
-    color:white;
     box-shadow: 0 2px 4px 0 rgba(0,0,0,.2);
+    padding:0;
 }
-.nav_div {
-    display: flex;
+.right-elements{
+    height:100%;
+    display:flex;
 }
-.items_left {
-    margin:1% 2%;
+.right-elements a{
+    font-family: 'Roboto Condensed', sans-serif;
+    text-transform: none;
+    font-size: 1.2rem;
 }
-
-.items_right {
-    float: right;
-    margin-left:auto;
-    background-color: black;
-    font-weight: bold;
-    padding:1% 1%;
-    width: 20%;
+.right-elements a:hover{
+    color:rgb(41, 142, 209);
 }
-
-.items_right a {
-    color:white;
+nav a{
     text-decoration: none;
-    margin:2%;
-
-}
-.index_header {
-    background-color: black;
-    background-image: url("https://media.istockphoto.com/photos/spring-summer-concept-playful-happy-dog-running-in-the-grass-and-picture-id1199435587?k=20&m=1199435587&s=170667a&w=0&h=ZefGD0imdpgY4cjeRRoWPz-yiZlcE-DuJTGmKCO-pqs=");
-    background-size: cover;
-    height: 85vh;
-    text-align: right;
     color:white;
+    margin: 0 0.4rem;
+    font-size: 2.5rem;
+    text-transform: uppercase;
+    font-family: 'Passion One', cursive;
+}
+nav a:hover {
+    color:white;
+}
+.form-class{
+    width:50%;
+    margin:2rem auto;
+    padding:1.5rem;
+}
+.form-class label, h2 {
+    font-weight: 700;
+}
+.form-class h2, label, input, select, button {
+    font-family: 'Roboto Condensed', sans-serif;
+}
+
+#index_header {
+    background-image:url(https://media.istockphoto.com/photos/spring-summer-concept-playful-happy-dog-running-in-the-grass-and-picture-id1199435587?k=20&m=1199435587&s=170667a&w=0&h=ZefGD0imdpgY4cjeRRoWPz-yiZlcE-DuJTGmKCO-pqs=);
+    background-size: cover;
+    height:100vh;
+}
+
+.Title {
+    text-align:right;
+    padding:13rem 0;
+    font-family: 'Roboto Condensed', sans-serif;
+    color:white;
+}
+
+.Title h1 {
+    font-size: 4rem;
+    font-weight: 700;
+    text-transform: uppercase;
+}
+
+.Title a {
+    text-transform: uppercase;
+    font-weight: 700;
 }
 
 #More {
-    padding:3%;
-}
-
-#More h1{
     text-align: center;
-    font-size: 2.5rem;
-}
-.Titles {
-    padding: 14% 10%;
-}
-
-.Titles h1 {
-    font-size: 4rem;
-}
-.Titles h3 {
-    font-size: 2rem;
+    align-items: center;
+    font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    margin:3%;
 }
 
-.Info_Box {
-    display:flex;
-    margin: 1% 0;
+#More img {
+    min-width: 16rem;
+    min-height: 13rem;
+    max-width: 16rem;
+    min-height: 13rem;
 }
 
-.Info_Box h3 {
-    font-size: 30px;
+.more_sections {
+    margin-right:auto;
+    margin-left: auto;
+    text-align:justify;
+    margin:3%;
 }
-
-.Info_Box p {
-    font-size: 20px;
-}
-
-.img-column{
-    width:40%;
-}
-.img-column img {
-    min-width:15rem;
-    min-height: 11rem;
-    max-width: 15rem;
-    max-height: 11rem;
-    border-color:white;
-    border-style:solid;
-}
-
-.img-column {
-    margin:0 2%;
-}
-
-.text-column {
-    margin:0 2%;
-    text-align: justify;
+.more_sections h3 {
+    text-align: center;
 }
