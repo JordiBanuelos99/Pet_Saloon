@@ -4,7 +4,7 @@ let salon={
     address: {
         street: "Palomar",
         zip: "22345",
-        city: "United States",
+        city: "San Diego",
         number: "245-K"
     },
     hours: {
@@ -12,35 +12,21 @@ let salon={
         close: "5:00 p. m."
     },
     phone:"555-5555",
-    pets: [
-        /* {
-            name: "Scooby",
-            age: 50,
-            gender: "Male",
-            breed: "Dane",
-            service: "grooming",
-            owner: "Shaggy",
-            phone: "888-8888"
-        },
-        {
-            name: "Dudley",
-            age: 25,
-            gender: "Male",
-            breed: "Mixed Breed",
-            service: "grooming",
-            owner: "Peg",
-            phone: "777-7777"
-        },
-        {
-            name: "Doidle",
-            age: 15,
-            gender: "Male",
-            breed: "Mixed Breed",
-            service: "vaccination",
-            owner: "Vicky",
-            phone: "222-2222"
-        } */
-    ]
+    pets: []
+}
+function displaySalonInfo(){
+    let tmp=
+    `<div class="row container">
+        <p>Welcome to ${salon.name}, located at ${salon.address.street}, ${salon.address.city}, ${salon.address.zip}, ${salon.address.number}</p>
+        <div class="col">
+            <p>Daily schedule: ${salon.hours.open} - ${salon.hours.close}</p>
+        </div>
+        <div class="col">
+            <p>Contact: ${salon.phone}</p>
+        </div>
+    </div>`;
+    document.getElementById("info").innerHTML=tmp;
+    console.log("displaying");
 }
 
 function Pet(n,a,g,b,s,o,p){
@@ -53,20 +39,19 @@ function Pet(n,a,g,b,s,o,p){
     this.phone=p;
 }
 
-/* Default Pets */
-let Scooby = new Pet ("Scooby", "50", "Male", "Dane", "Grooming", "Shaggy", "888-8888");
-let Dudley = new Pet ("Dudley", "10", "Male", "Mixed-Breed", "Grooming", "Peg", "777-7777");
-let Doidle = new Pet ("Doidle", "20", "Male", "Canaan", "Vaccines", "Vicky", "222-2222");
-salon.pets.push(Scooby, Dudley, Doidle);
-console.log(salon.pets[0],salon.pets[1],salon.pets[2]); 
 
-/* Clear all inputs in form */
-function clearForm(){
-    document.getElementById("txtName").value="";
-    document.getElementById("txtAge").value="";
-    document.getElementById("txtBreed").value="";
-    document.getElementById("txtOwner").value="";
-    document.getElementById("txtPhone").value="";
+/* Default Pets */
+let Scooby = new Pet("Scooby", 50, "Male", "Dane", "Grooming", "Shaggy", "888-8888");
+let Dudley = new Pet("Dudley", 25, "Male", "Mixed-Breed", "Grooming", "Peg", "777-7777");
+let Doidle = new Pet("Doidle", 20, "Male", "Canaan", "Vaccines", "Vicky", "222-2222");
+
+function isValid(aPet){
+    let valid=true;
+    if(aPet.name=="" || aPet.service=="" || aPet.phone==""){
+        //If we arrive here the pet is not valid
+        valid=false;
+    }
+    return valid;
 }
 /* Registering pets */
 function register(){
@@ -80,27 +65,44 @@ function register(){
     let petOwner = document.getElementById("txtOwner").value;
     let petPhone = document.getElementById("txtPhone").value;
     //Create the object using the constructor
-    let newPet = new Pet (petName, petAge, petGender, petBreed, petService, petOwner, petPhone);
+    let newPet = new Pet(petName, petAge, petGender, petBreed, petService, petOwner, petPhone);
+    if(isValid(newPet)==true){
+        // Put the objects in on the array
+        salon.pets.push(newPet);
+        // Display it on the HTML
+        displayCards();
+        // clear the form
+        clear();
+    }
+    else{
+        alert("Add a name for the pet");
+    }
     //Push the object into the array
     salon.pets.push(newPet);
     //Display on console
     console.log(newPet);
-    clearForm();
-}
-function displayInfo(){
-    document.getElementById("info").innerHTML=
-    `<div class=row>
-        <p>Welcome to ${salon.name}, located at ${salon.address.street}, ${salon.address.city}, ${salon.address.zip}, ${salon.address.number}</p>
-        <div class=col>
-            <p>Daily schedule: ${salon.hours.open} - ${salon.hours.close}</p>
-        </div>
-        <div class=col>
-            <p>Contact: ${salon.phone}</p>
-        </div>
-    </div>`;
+    clear();
 }
 
+function clear(){
+    // let inputs=document.getElementsByTagName("input");
+    // let inputs=document.querySelector("input");
+    // for(let i=0;i<inputs.length;i++)
+    // {
+    //     inputs[i].value="";
+    // }
+    //document.getElementById(selGender).value="default";
+    //document.getElementById(selService).value="default";
+    //JQuery
+    $("input").val("");
+}
 //console.log(salon.pets[i]); //Displays Scooby
 
-alert(`There are ${salon.pets.length} pets registered so far`);
-displayInfo();
+function init(){
+    //Hook and trigger events
+    displaySalonInfo();
+    salon.pets.push(Scooby, Dudley, Doidle);
+    displayTable();
+}
+//alert(`There are ${salon.pets.length} pets registered so far`);
+window.onload=init;

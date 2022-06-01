@@ -2,11 +2,48 @@
     margin:0;
     padding:0;
 }
-body.register{
-    background-image: url("img/Wallpaper_2.jpg");
-    background-size: cover;
+
+.fade-in-text {
+    animation: fadeIn linear 1s;
+    -webkit-animation: fadeIn linear 1s;
+    -moz-animation: fadeIn linear 1s;
+    -o-animation: fadeIn linear 1s;
+    -ms-animation: fadeIn linear 1s;
+  }
+  
+  @keyframes fadeIn {
+    0% {opacity:0;}
+    100% {opacity:1;}
+  }
+  
+  @-moz-keyframes fadeIn {
+    0% {opacity:0;}
+    100% {opacity:1;}
+  }
+  
+  @-webkit-keyframes fadeIn {
+    0% {opacity:0;}
+    100% {opacity:1;}
+  }
+  
+  @-o-keyframes fadeIn {
+    0% {opacity:0;}
+    100% {opacity:1;}
+  }
+  
+  @-ms-keyframes fadeIn {
+    0% {opacity:0;}
+    100% {opacity:1;}
+  }
+header.register{
+    background-image: url("img/Wallpaper_3.jpg");
     font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
     background-size: cover;
+    background-repeat:no-repeat;
+    background-position: center;
+}
+body.services{
+    background-color: rgb(248, 248, 248);
 }
 nav{
     box-shadow: 0 2px 4px 0 rgba(0,0,0,.2);
@@ -52,7 +89,17 @@ nav a:hover {
     background-size: cover;
     height:100vh;
 }
+.index_card {
+    border-radius: 5px;
+    color:white;
+}
+body.index{
+    background-color: rgb(7, 129, 48);
+}
 
+.index_card h1{
+    text-transform: uppercase;
+}
 .Title {
     text-align:right;
     padding:13rem 0;
@@ -64,6 +111,7 @@ nav a:hover {
     font-size: 4rem;
     font-weight: 700;
     text-transform: uppercase;
+    text-shadow: 1px 2px rgba(0, 0, 0, 0.623);
 }
 
 .Title a {
@@ -100,5 +148,116 @@ nav a:hover {
     text-align: center;
     color:white;
     font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
 
+#pets{
+    display:grid;
+    grid-template-columns: repeat(3,1fr);
+    column-gap: 1rem;
+    row-gap: 1rem;
+}
+
+.pet{
+    background-color: white;
+    border:1px solid gray;
+    border-radius: 5px;
+    padding: 1rem;
+}
+
+#services_header{
+    font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    color:white;
+    background-color: rgb(7, 129, 48);
+}
+#services_header img {
+    width:32rem;
+}
+
+.services_titles{
+    padding: 7rem 4rem;
+    text-shadow: 1px 2px rgba(0, 0, 0, 0.623);
+}
+.services_titles h1{
+    text-transform: uppercase;
+    font-size: 4rem;
+    font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+.services_card h1 {
+    font-size: 4rem;
+}
+.services_card {
+    padding:3%;
+    font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+.services_card h4{
+    text-transform: uppercase;
+}
+.services_card p{
+    text-align: justify;
+    font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+.modal-content {
+    text-align: justify;
+    font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    padding:2%;
+}
+.modal-content h5 {
+    text-transform: uppercase;
+    font-size: 2rem;
+}
+.modal-content img {
+    min-width:22rem;
+    max-width:22rem;
+    min-height: 15rem;
+    max-height: 15rem;
+}
+
+#about_header{
+    font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    color:white;
+    background-color: rgb(7, 129, 48);
+}
+#about_header img {
+    width:24rem;
+    padding:2.5rem;
+    margin-left:20%;
+}
+.biography {
+    padding: 3%;
+}
+
+.biography p {
+    text-align: justify;
+}
+
+.biography h1{
+    text-align: center;
+    font-family: 'Roboto Condensed', sans-serif;
+    margin:2%;
+}
+.biography img {
+    width: 25rem;
+}
+
+.bio_elements {
+    padding:3%;
+}
+
+.t_left p{
+    text-align: center;
+    font-style: italic;
+}
+
+.inside_card {
+    padding:3%;
+}
+.outside_card {
+    margin-bottom:3%;
+}
+
+.inside_card h2 {
+    text-align: center;
+    font-family: 'Roboto Condensed', sans-serif;
+    font-weight: 700;
+    text-transform: uppercase;
 }
