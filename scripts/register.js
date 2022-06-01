@@ -44,10 +44,12 @@ function Pet(n,a,g,b,s,o,p){
 let Scooby = new Pet("Scooby", 50, "Male", "Dane", "Grooming", "Shaggy", "888-8888");
 let Dudley = new Pet("Dudley", 25, "Male", "Mixed-Breed", "Grooming", "Peg", "777-7777");
 let Doidle = new Pet("Doidle", 20, "Male", "Canaan", "Vaccines", "Vicky", "222-2222");
+let Astro = new Pet("Astro", 60, "Male", "Dane", "Grooming", "George Jetson", "123-4567");
+
 
 function isValid(aPet){
     let valid=true;
-    if(aPet.name=="" || aPet.service=="" || aPet.phone==""){
+    if(aPet.name=="" || aPet.service==""){
         //If we arrive here the pet is not valid
         valid=false;
     }
@@ -70,7 +72,7 @@ function register(){
         // Put the objects in on the array
         salon.pets.push(newPet);
         // Display it on the HTML
-        displayCards();
+        displayTable();
         // clear the form
         clear();
     }
@@ -95,13 +97,14 @@ function clear(){
     //document.getElementById(selService).value="default";
     //JQuery
     $("input").val("");
+    
 }
 //console.log(salon.pets[i]); //Displays Scooby
 
 function init(){
     //Hook and trigger events
     displaySalonInfo();
-    salon.pets.push(Scooby, Dudley, Doidle);
+    salon.pets.push(Scooby, Dudley, Doidle, Astro);
     displayTable();
 }
 //alert(`There are ${salon.pets.length} pets registered so far`);
