@@ -25,6 +25,7 @@
           </div>
         </div>
       </nav>
+    
     <header class="register">
         <div class="container card form-class">
             <h2 class="text-center">Fill out the following form</h2>
@@ -69,6 +70,16 @@
                 <div class="mb-3">
                     <label class="form-label">Phone Number</label>
                     <input class="form-control" type="text" placeholder="Enter owner's phone number" id="txtPhone">
+                </div>
+                <div class="mb-3">
+                    <label class="form-label">Payment method</label>
+                    <select class="form-select" id="selPayment">
+                        <option value="default" disabled selected>-- Select the payment method --</option>
+                        <option value="cash">Cash</option>
+                        <option value="credit">Credit Card</option>
+                        <option value="debit">Debit Card</option>
+                        <option value="paypal">Paypal</option>
+                    </select>
                 </div>
                 <div class="mb-3 text-center">
                     <button type="button" class="btn btn-success" onclick="register()"><i class="fa-solid fa-circle-check"></i> Ready for submission</button>

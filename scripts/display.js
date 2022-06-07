@@ -33,6 +33,7 @@ function displayTable() {
             <th>Service</th>
             <th>Owner</th>
             <th>Phone number</th>
+            <th>Payment Method</th>
         </tr>
     `
     // Travel the array
@@ -48,6 +49,7 @@ function displayTable() {
             <td scope="col">${pet.service}</td>
             <td scope="col">${pet.owner}</td>
             <td scope="col">${pet.phone}</td>
+            <td scope="col">${pet.payment}</td>
         </tr>
         `;
         petTable.append(tmp);
